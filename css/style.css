@@ -1,1 +1,20 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
+#gameBoard {
+
+    display: grid;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-columns: repeat(3, 150px);
+    border: 1px solid black;
+}
+
+#spots {
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black;
+   
+}
