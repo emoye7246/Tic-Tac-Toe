@@ -1,48 +1,81 @@
-(function() {
+let markers = ["X", "O"];
 
-    
-function game(gameBoard, players, rules, choices) {
-    
-    this.gameBoard = function(){
-        // Create Board 3x3 score
-        let board = document.getElementById("board");
-        let displayBoard = document.createElement("div");
-        displayBoard.id = "gameBoard";
-        board.appendChild(displayBoard);
-    };
-    this.players = function(playerOne, playerTwo, computer) {
-        // get players information
-        // Display players NAMES
-        this.playerOne = playerOne; 
-        this.playerTwo = playerTwo;
-        this.computer = computer;
+// For board control
+let one = document.getElementById("one");
+let two = document.getElementById("two");
+let three = document.getElementById("three");
+let four = document.getElementById("four");
+let five = document.getElementById("five");
+let six = document.getElementById("six");
+let seven = document.getElementById("seven");
+let eight = document.getElementById("eight");
+let nine = document.getElementById("nine");
 
-        playerOne = window.prompt("Enter Name");
-        computer = "Computer";
-        return(playerOne);
+function players(){
+let playerOne = window.prompt("enter name");
+let playerChoice = window.prompt(`Hello ${playerOne} CHOOSE ${markers[0]} or ${markers[1]}`);
+if (playerChoice != markers[0] && playerChoice != markers[1] ) {
 
-        playerTwo = window.prompt("Enter Name");
+    return console.log("it works");
+}
+else if (playerChoice == markers[0] || playerChoice == markers[1]){
+    return playerChoice;
+}
 
-    };
-    this.rules = function(){
-        // get score of winner
-        // display score
-        let X = 1; 
-        let O = 1;
-        
+}
+players();
 
-        if(playerOne  ) {
-            console.log("it works");
-        }
+function boardControl(){
+    one.addEventListener("click", () => {
+        one.innerHTML = playerChoice;
+        console.log("User has clicked the first square")
 
+    })
+    two.addEventListener("click", () => {
+        two.innerHTML = playerChoice;
+        console.log("User has clicked the second square")
 
+    })
+    three.addEventListener("click", () => {
+        three.innerHTML = playerChoice;
+        console.log("User has clicked the third square")
 
-    };
+    })
+    four.addEventListener("click", () => {
+        four.innerHTML = playerChoice;
+        console.log("User has clicked the fourth square")
 
-    this.choices = function(marker){
-        this.marker = ["X", "O"];
-    }
-    
-    }
-    return game();
-})()
+    })
+    five.addEventListener("click", () => {
+        five.innerHTML = playerChoice;
+        console.log("User has clicked the fifth square")
+
+    })
+    six.addEventListener("click", () => {
+        six.innerHTML = playerChoice;
+        console.log("User has clicked the sixth square")
+
+    })
+    seven.addEventListener("click", () => {
+        seven.innerHTML = playerChoice;
+        console.log("User has clicked the seventh square")
+
+    })
+    eight.addEventListener("click", () => {
+        eight.innerHTML = "X";
+        console.log("User has clicked the eighth square")
+
+    })
+    nine.addEventListener("click", () => {
+        nine.innerHTML = "X";
+        console.log("User has clicked the ninth square")
+    })
+}
+boardControl();
+
+// function player() {
+//     // checkwinner
+//     if()
+// }
+
+// gameboard keys
